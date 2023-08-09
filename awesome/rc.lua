@@ -36,9 +36,9 @@ end
 setTheme("gruvbox")
 setWallpaper() -- It does not receive params, but you can change the function to do so
 
--- Global varaibles
-terminal = "kitty"
-editor = os.getenv("EDITOR")
+-- Globals
+terminal = "alacritty"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 autorun = true
@@ -70,10 +70,10 @@ end)
 autorunApps = {
 	"picom",
 	"firefox",
+    "discord",
 }
 if autorun then
 	for app = 1, #autorunApps do
 		awful.util.spawn(autorunApps[app])
 	end
 end
-awful.spawn.with_shell("flatpak run com.discordapp.Discord")
