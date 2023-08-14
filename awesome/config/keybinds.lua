@@ -27,7 +27,7 @@ globalkeys = gears.table.join(
 
 	awful.key({ modkey }, "F6", function()
 		awful.spawn.with_shell("playerctl previous")
-	end, { description = "Next song", group = "Custom" }),
+	end, { description = "Previous song", group = "Custom" }),
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
 	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
