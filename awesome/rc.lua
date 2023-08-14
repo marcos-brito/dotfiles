@@ -9,35 +9,35 @@ local setWallpaper = require("helpers.setWallpaper")
 
 --Check for errors and load default config if any
 if awesome.startup_errors then
-	naughty.notify({
-		preset = naughty.config.presets.critical,
-		title = "Oops, there were errors during startup!",
-		text = awesome.startup_errors,
-	})
+    naughty.notify({
+        preset = naughty.config.presets.critical,
+        title = "Oops, there were errors during startup!",
+        text = awesome.startup_errors,
+    })
 end
 
 do
-	local in_error = false
-	awesome.connect_signal("debug::error", function(err)
-		if in_error then
-			return
-		end
-		in_error = true
+    local in_error = false
+    awesome.connect_signal("debug::error", function(err)
+        if in_error then
+            return
+        end
+        in_error = true
 
-		naughty.notify({
-			preset = naughty.config.presets.critical,
-			title = "Oops, an error happened!",
-			text = tostring(err),
-		})
-		in_error = false
-	end)
+        naughty.notify({
+            preset = naughty.config.presets.critical,
+            title = "Oops, an error happened!",
+            text = tostring(err),
+        })
+        in_error = false
+    end)
 end
 
 setTheme("gruvbox")
 setWallpaper() -- It does not receive params, but you can change the function to do so
 
 -- Globals
-terminal = "alacritty"
+terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
@@ -61,19 +61,19 @@ root.keys(globalkeys)
 
 -- Place the window somewhere (i think)
 client.connect_signal("manage", function(c)
-	if awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
-		awful.placement.no_offscreen(c)
-	end
+    if awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
+        awful.placement.no_offscreen(c)
+    end
 end)
 
 -- Autorun
 autorunApps = {
-	"picom",
-	"firefox",
-    "discord",
+    "picom",
+    -- "firefox",
+    -- "discord",
 }
 if autorun then
-	for app = 1, #autorunApps do
-		awful.util.spawn(autorunApps[app])
-	end
+    for app = 1, #autorunApps do
+        awful.util.spawn(autorunApps[app])
+    end
 end
