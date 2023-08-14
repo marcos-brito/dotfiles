@@ -6,6 +6,7 @@ opt.relativenumber = true
 opt.hidden = true
 opt.fcs = "eob: "
 --opt.numberwidth= 5
+opt.lazyredraw = true
 opt.completeopt = { "menuone", "noselect" }
 opt.conceallevel = 0
 opt.fileencoding = "utf-8"

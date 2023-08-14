@@ -1,1 +1,3 @@
-require("hardtime").setup()
+local hardtime = require("hardtime")
+
+hardtime.setup({})

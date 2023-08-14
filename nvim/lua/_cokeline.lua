@@ -10,8 +10,8 @@ local function getColors()
 		colors["red"] = "#e8a2af"
 	end
 	if theme == "gruvbox-material" then
-		colors["bgligth"] = "#181b1c"
-		colors["bgdark"] = "#151618"
+		colors["bgligth"] = "#1d2021"
+		colors["bgdark"] = "#141618"
 		colors["textligth"] = "#8a7a6d"
 		colors["textdark"] = "#a4987b"
 		colors["green"] = "#98a85a"

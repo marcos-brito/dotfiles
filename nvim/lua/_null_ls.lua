@@ -7,9 +7,9 @@ null_ls.setup({
         null_ls.builtins.formatting.prettierd, --.with({ extra_args = "--tab-width 4" }),
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.rustfmt,
-        null_ls.builtins.formatting.google_java_format,
+        -- null_ls.builtins.formatting.google_java_format,
         null_ls.builtins.formatting.sql_formatter,
-        -- null_ls.builtins.formatting.clang_format,
+        null_ls.builtins.formatting.clang_format,
     },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

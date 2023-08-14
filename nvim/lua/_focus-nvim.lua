@@ -1,1 +1,3 @@
-require("focus").setup({})
+local focus = require("focus")
+
+focus.setup({})
