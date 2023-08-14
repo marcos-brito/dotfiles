@@ -24,7 +24,7 @@ local function createWibarIcon()
 
 	wibarIcon:connect_signal("button::press", function(x, y, button, a)
 		if a == 1 then
-			FloatBox.visible = not FloatBox.visible
+			FloatBox:toggle()
 		else
 			Thing.visible = not Thing.visible
 		end

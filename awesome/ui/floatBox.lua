@@ -36,9 +36,9 @@ FloatBox:setup({
 				floatingBox.weather(),
 				floatingBox.player(),
 				{
-					floatingBox.icon("", terminal, 50, beautiful.yellowcolor),
-					floatingBox.icon("爵", "firefox", 50, beautiful.greencolor),
-					floatingBox.icon("", "rofi -show drun", 50, beautiful.yellowcolor),
+					floatingBox.icon("", terminal, 30, beautiful.yellowcolor),
+					floatingBox.icon("", "firefox", 30, beautiful.greencolor),
+					floatingBox.icon("", "rofi -show drun", 30, beautiful.yellowcolor),
 					spacing = -50,
 					layout = wibox.layout.flex.horizontal,
 				},
@@ -52,5 +52,9 @@ FloatBox:setup({
 	},
 	layout = wibox.layout.fixed.vertical,
 })
+
+function FloatBox:toggle()
+	self.visible = not self.visible
+end
 
 return FloatBox

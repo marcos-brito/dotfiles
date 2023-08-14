@@ -44,17 +44,8 @@ volume:setup({
 				fg = beautiful.bg_focus,
 			},
 			{
-				awful.widget.watch("amixer sget 'Master'", 0.1, function(widget, stdout)
-					local volume_level = string.match(stdout, "(%d?%d?%d)%%")
-					local mute = string.match(stdout, "%[(o%D%D?)%]")
-					if mute == "off" then
-						widget:set_text("")
-						return
-					end
-					widget:set_text(volume_level)
-				end, volumeText),
+				volumeText,
 				widget = wibox.container.background,
-				fg = beautiful.fg_normal,
 			},
 			spacing = 5,
 			layout = wibox.layout.fixed.horizontal,
@@ -71,16 +62,19 @@ volume.time = 0
 function volume:decrease()
 	self:toggle()
 	awful.spawn.with_shell("amixer sset 'Master' 5%-")
+	self:update()
 end
 
 function volume:increase()
 	self:toggle()
 	awful.spawn.with_shell("amixer sset 'Master' 5%+")
+	self:update()
 end
 
 function volume:mute()
 	self:toggle()
 	awful.spawn.with_shell("amixer sset 'Master' toggle")
+	self:update()
 end
 
 function volume:toggle()
@@ -90,6 +84,18 @@ function volume:toggle()
 			self.visible = false
 		end)
 	end
+end
+
+function volume:update()
+	awful.spawn.easy_async_with_shell("amixer sget 'Master'", function(stdout)
+		local volume_level = string.match(stdout, "(%d?%d?%d)%%")
+		local mute = string.match(stdout, "%[(o%D%D?)%]")
+		if mute == "off" then
+			volumeText:set_text(" ")
+			return
+		end
+		volumeText:set_text(volume_level)
+	end)
 end
 
 return volume
