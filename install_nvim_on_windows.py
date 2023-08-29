@@ -7,7 +7,7 @@ SCOOP_INSTALL_COMMAND = "irm get.scoop.sh | iex"
 NVIM_INSTALL_COMMAND = "scoop install main/neovim"
 NVIM_CONFIG_PATH = "./nvim"
 USER_PROFILE = os.environ["USERPROFILE"]
-TARGET_PATH = USER_PROFILE + "/AppData/local"
+TARGET_PATH = os.path.join(USER_PROFILE, "AppData", "local")
 
 
 def check_if_scoop_is_installed() -> bool:
@@ -18,21 +18,23 @@ def check_if_scoop_is_installed() -> bool:
 
 
 def install_scoop() -> None:
-    subprocess.run(SCOOP_REMOTE_COMMAND)
-    subprocess.run(SCOOP_INSTALL_COMMAND)
+    subprocess.run(["powershell.exe", "-Command", SCOOP_REMOTE_COMMAND])
+    subprocess.run(["powershell.exe", "-Command", SCOOP_INSTALL_COMMAND])
 
 
 def install_nvim() -> None:
-    subprocess.run(NVIM_INSTALL_COMMAND)
+    subprocess.run(["powershell.exe", "-Command", NVIM_INSTALL_COMMAND])
 
 
 def create_backup():
-    BACKUP_EXIST = os.path.exists(TARGET_PATH + "/old")
+    BACKUP_PATH = os.path.join(TARGET_PATH, "old")
+    BACKUP_EXIST = os.path.exists(BACKUP_PATH)
+    NVIM_OLD_CONFIG_PATH = os.path.join(TARGET_PATH, "nvim")
 
     if not BACKUP_EXIST:
-        os.mkdir(TARGET_PATH + "/old")
+        os.mkdir(BACKUP_PATH)
 
-    shutil.move(TARGET_PATH + "/nvim", TARGET_PATH + "/old")
+    shutil.move(NVIM_OLD_CONFIG_PATH, BACKUP_PATH)
 
 
 def copy_nvim_config() -> None:
