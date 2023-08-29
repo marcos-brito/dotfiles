@@ -26,7 +26,7 @@ def install_nvim() -> None:
     subprocess.run(["powershell.exe", "-Command", NVIM_INSTALL_COMMAND])
 
 
-def create_backup():
+def create_backup() -> None:
     BACKUP_PATH = os.path.join(TARGET_PATH, "old")
     BACKUP_EXIST = os.path.exists(BACKUP_PATH)
     NVIM_OLD_CONFIG_PATH = os.path.join(TARGET_PATH, "nvim")
