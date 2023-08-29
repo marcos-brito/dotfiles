@@ -30,6 +30,10 @@ def create_backup() -> None:
     BACKUP_PATH = os.path.join(TARGET_PATH, "old")
     BACKUP_EXIST = os.path.exists(BACKUP_PATH)
     NVIM_OLD_CONFIG_PATH = os.path.join(TARGET_PATH, "nvim")
+    NVIM_OLD_CONFIG_PATH_EXIST = os.path.exists(NVIM_OLD_CONFIG_PATH)
+
+    if not NVIM_OLD_CONFIG_PATH_EXIST:
+        return
 
     if not BACKUP_EXIST:
         os.mkdir(BACKUP_PATH)
