@@ -45,11 +45,17 @@ lsp_config.pyright.setup({})
 lsp_config.lua_ls.setup({})
 lsp_config.tsserver.setup({})
 lsp_config.html.setup({})
-lsp_config.clangd.setup({})
+lsp_config.clangd.setup({
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
+})
 lsp_config.jdtls.setup({})
 lsp_config.jsonls.setup({})
 lsp_config.prismals.setup({})
 lsp_config.vimls.setup({})
+lsp_config.bashls.setup({})
 lsp_config.rust_analyzer.setup({
 	filetypes = { "rust" },
 	settings = {
@@ -66,22 +72,4 @@ lsp_config.sqls.setup({
 	on_attach = function(client, bufnr)
 		require("sqls").on_attach(client, bufnr)
 	end,
-	settings = {
-		sqls = {
-			connections = {
-				{
-					driver = "mysql",
-					dataSourceName = "",
-
-					--username:password@tcp:(host:port)/database
-				},
-				{
-					driver = "postgresql",
-					dataSourceName = "",
-
-					-- host=127.0.0.1 port=15432 user=postgres password=mysecretpassword1234 dbname=dvdrental sslmode=disable
-				},
-			},
-		},
-	},
 })
