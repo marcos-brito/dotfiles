@@ -5,9 +5,9 @@ import subprocess
 SCOOP_REMOTE_COMMAND = "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
 SCOOP_INSTALL_COMMAND = "irm get.scoop.sh | iex"
 NVIM_INSTALL_COMMAND = "scoop install main/neovim"
-NVIM_CONFIG_PATH = "./nvim"
+NVIM_LOCAL_CONFIG_PATH = "./nvim"
 USER_PROFILE = os.environ["USERPROFILE"]
-TARGET_PATH = os.path.join(USER_PROFILE, "AppData", "local", "nvim")
+TARGET_PATH = os.path.join(USER_PROFILE, "AppData", "local")
 
 
 def check_if_scoop_is_installed() -> bool:
@@ -44,7 +44,7 @@ def create_backup() -> None:
 def copy_nvim_config() -> None:
     nvim_config_path = os.path.join(TARGET_PATH, "nvim")
 
-    shutil.copytree(NVIM_CONFIG_PATH, nvim_config_path)
+    shutil.copytree(NVIM_LOCAL_CONFIG_PATH, nvim_config_path, dirs_exist_ok=True)
 
 
 if __name__ == "__main__":
