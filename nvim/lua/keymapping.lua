@@ -73,3 +73,6 @@ keymap("n", "<leader>wl", "<Plug>RestNvimLast<CR>", opts)
 -- Neotest
 keymap("n", "<leader>t", ":lua require('neotest').run.run() <CR>", opts)
 keymap("n", "<leader>tt", ":lua require('neotest').summary.toggle() <CR>", opts)
+
+-- Trouble.nvim
+keymap("n", "<leader>xx", ":TroubleToggle document_diagnostics <CR>", opts)
