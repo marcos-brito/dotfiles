@@ -4,18 +4,20 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvim_tree.setup({
-    sync_root_with_cwd = true,
-    respect_buf_cwd = true,
-    update_focused_file = {
-        enable = true,
-        update_cwd = true,
-        update_root = false,
-    },
-    view = {
-        relativenumber = true,
-        side = "left",
-        hide_root_folder = true,
-        centralize_selection = false,
-    },
-    renderer = {},
+	sync_root_with_cwd = true,
+	respect_buf_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+		update_root = false,
+	},
+	view = {
+		relativenumber = true,
+		side = "left",
+		centralize_selection = false,
+	},
+	renderer = {
+
+		root_folder_label = false,
+	},
 })

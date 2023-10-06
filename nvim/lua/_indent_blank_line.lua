@@ -1,3 +1,3 @@
-local indent_line = require("indent_blankline")
+local indent_line = require("ibl")
 
-indent_line.setup{}
+indent_line.setup({})
