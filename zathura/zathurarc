@@ -1,1 +1,2 @@
 include gruvbox
+set selection-clipboard clipboard
