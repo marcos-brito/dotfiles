@@ -4,26 +4,26 @@ local lsp_config = require("lspconfig")
 local lsp_saga = require("lspsaga")
 
 lsp_saga.setup({
-	ui = {
-		-- This option only works in Neovim 0.9
-		title = true,
-		-- Border type can be single, double, rounded, solid, shadow.
-		border = "rounded",
-		winblend = 0,
-		expand = "",
-		collapse = "",
-		code_action = "",
-		incoming = " ",
-		outgoing = " ",
-		hover = " ",
-		kind = {},
-	},
+    ui = {
+        -- This option only works in Neovim 0.9
+        title = true,
+        -- Border type can be single, double, rounded, solid, shadow.
+        border = "rounded",
+        winblend = 0,
+        expand = "",
+        collapse = "",
+        code_action = "",
+        incoming = " ",
+        outgoing = " ",
+        hover = " ",
+        kind = {},
+    },
 })
 
 local signs = { Error = "", Warn = "", Hint = " ", Info = "" }
 for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 mason.setup({})
@@ -39,17 +39,17 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lsp_config.cssls.setup({
-	capabilities = capabilities,
+    capabilities = capabilities,
 })
 lsp_config.pyright.setup({})
 lsp_config.lua_ls.setup({})
 lsp_config.tsserver.setup({})
 lsp_config.html.setup({})
 lsp_config.clangd.setup({
-	cmd = {
-		"clangd",
-		"--offset-encoding=utf-16",
-	},
+    cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+    },
 })
 lsp_config.jdtls.setup({})
 lsp_config.jsonls.setup({})
@@ -57,19 +57,19 @@ lsp_config.prismals.setup({})
 lsp_config.vimls.setup({})
 lsp_config.bashls.setup({})
 lsp_config.rust_analyzer.setup({
-	filetypes = { "rust" },
-	settings = {
-		["rust-analyzer"] = {
-			cargo = {
-				allFeatures = true,
-			},
-		},
-	},
+    filetypes = { "rust" },
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                allFeatures = true,
+            },
+        },
+    },
 })
 
 lsp_config.gopls.setup({})
-lsp_config.sqls.setup({
-	on_attach = function(client, bufnr)
-		require("sqls").on_attach(client, bufnr)
-	end,
+lsp_config.sqlls.setup({
+    on_attach = function(client, bufnr)
+        require("sqls").on_attach(client, bufnr)
+    end,
 })

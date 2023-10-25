@@ -1,7 +1,7 @@
 local function getColors()
 	local theme = vim.g.colors_name
 	local colors = {}
-	if theme == "catppuccin" then
+	if theme == "catppuccin-mocha" then
 		colors["bgligth"] = "#1E1E2E"
 		colors["bgdark"] = "#181724"
 		colors["textlight"] = "#C9CBFF"

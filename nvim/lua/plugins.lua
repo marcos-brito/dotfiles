@@ -21,7 +21,7 @@ return require("packer").startup(function(use)
 	use("nvim-tree/nvim-web-devicons")
 
 	-- Files thing
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+	use({ "nvim-telescope/telescope.nvim" })
 	use("nvim-tree/nvim-tree.lua")
 	use("nvim-telescope/telescope-file-browser.nvim")
 
@@ -32,7 +32,7 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("sainnhe/gruvbox-material")
 	use("sainnhe/everforest")
-	use("ishan9299/nvim-solarized-lua")
+	use("overcache/NeoSolarized")
 
 	-- Buffer stuff
 	use("noib3/nvim-cokeline")
@@ -108,7 +108,6 @@ return require("packer").startup(function(use)
 	use("olimorris/persisted.nvim")
 	use("m4xshen/hardtime.nvim")
 	use("nvim-focus/focus.nvim")
-	use({ "anuvyklack/windows.nvim", requires = "anuvyklack/middleclass" })
 
 	-- Debug
 	use("mfussenegger/nvim-dap")
