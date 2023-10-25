@@ -12,6 +12,7 @@ local theme = {}
 
 theme.wallpaper = themes_path .. "catppuccin/background.png"
 theme.wibarIcon = themes_path .. "catppuccin/wibarIcon.png"
+theme.shutdownIcon = themes_path .. "catppuccin/shutdownIcon.png"
 
 theme.quote = "In love with Gruvbox"
 theme.wibarItemsShape = gears.shape.rounded_bar

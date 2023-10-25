@@ -34,7 +34,7 @@ awful.screen.connect_for_each_screen(function(s)
 			wibar.systray(),
 			wibar.clock(),
 			wibar.volume(),
-			wibar.logout(),
+			wibar.shutDown(),
 		},
 	})
 end)
