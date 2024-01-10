@@ -1,3 +1,4 @@
 .env
 nvim/plugin
 open_weather
+*.vim
