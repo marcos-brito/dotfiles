@@ -7,7 +7,7 @@ local function createDate()
 			format = " %d/%m/%Y",
 			align = "center",
 			halign = "center",
-			font = beautiful.font .. "SemiBold 12",
+			font = "Poppins " .. "SemiBold 12",
 			widget = wibox.widget.textclock,
 		},
 		fg = beautiful.greencolor,

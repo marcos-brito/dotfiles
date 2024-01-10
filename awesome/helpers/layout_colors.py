@@ -28,11 +28,13 @@ def change_color(file_path, color):
 def is_hexa(string):
     if len(string) < 7:
         return False
+
     match = re.search(r"^#(?:[0-9a-fA-F]{3}){1,2}$", string)
+
     if match:
         return True
-    else:
-        return False
+
+    return False
 
 
 def hex_to_rgb(hex):

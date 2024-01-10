@@ -1,16 +1,11 @@
 local gears = require("gears")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
+local Clock = require("ui.widgets.Clock")
 
-local function createWibarClock()
-	local wibarClock = wibox.widget({
-		{
-			format = " %H:%M ",
-			align = "center",
-			halign = "center",
-			font = beautiful.font .. "SemiBold 9",
-			widget = wibox.widget.textclock,
-		},
+local function WibarClock()
+	local wibar_clock = wibox.widget({
+		Clock("SemiBold", 9),
 		bg = beautiful.bg_normal,
 		fg = beautiful.yellowcolor,
 		forced_width = 70,
@@ -29,13 +24,13 @@ local function createWibarClock()
 		next_month_button = 3,
 	})
 
-	wibarClock:connect_signal("button::press", function(_, _, _, button)
+	wibar_clock:connect_signal("button::press", function(_, _, _, button)
 		if button == 1 then
 			cw.toggle()
 		end
 	end)
 
-	return wibarClock
+	return wibar_clock
 end
 
-return createWibarClock
+return WibarClock

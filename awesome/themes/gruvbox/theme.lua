@@ -14,7 +14,7 @@ local themes_path = string.format("%s/.config/awesome/themes/", os.getenv("HOME"
 
 local theme = {}
 
-theme.wallpaper = themes_path .. "gruvbox/background3.png"
+theme.wallpaper = themes_path .. "gruvbox/background2.png"
 theme.wibarIcon = themes_path .. "gruvbox/wibarIcon.png"
 theme.shutdownIcon = themes_path .. "gruvbox/shutdownIcon.png"
 
@@ -64,7 +64,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- Variables set for theming notifications:
 theme.notification_bg = beautiful.bg_normal
 theme.notification_fg = beautiful.fg_normal
-theme.notification_width = dpi(350)
+theme.notification_width = dpi(600)
 theme.notification_shape = gears.shape.rounded_rect
 theme.notification_border_width = 0
 theme.notification_margin = 20

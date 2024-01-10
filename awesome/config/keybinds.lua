@@ -6,27 +6,27 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 
 globalkeys = gears.table.join(
 	awful.key({ modkey }, "-", function()
-		Volume:decrease()
+		VolumePopupWidget:decrease()
 	end, { description = "Decrease volume", group = "Custom" }),
 
 	awful.key({ modkey }, "=", function()
-		Volume:increase()
+		VolumePopupWidget:increase()
 	end, { description = "Increase volume", group = "Custom" }),
 
 	awful.key({ modkey }, "]", function()
-		Volume:mute()
+		VolumePopupWidget:mute()
 	end, { description = "Mute/Unmute volume", group = "Custom" }),
 
 	awful.key({ modkey }, "F8", function()
-		awful.spawn.with_shell("playerctl next")
+		awful.spawn.with_shell("playerctl --player=spotify next")
 	end, { description = "Next song", group = "Custom" }),
 
 	awful.key({ modkey }, "F7", function()
-		awful.spawn.with_shell("playerctl play-pause")
+		awful.spawn.with_shell("playerctl --player=spotify play-pause")
 	end, { description = "Pause song", group = "Custom" }),
 
 	awful.key({ modkey }, "F6", function()
-		awful.spawn.with_shell("playerctl previous")
+		awful.spawn.with_shell("playerctl --player=spotify previous")
 	end, { description = "Previous song", group = "Custom" }),
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),

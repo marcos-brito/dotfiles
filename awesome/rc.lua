@@ -4,8 +4,13 @@ require("awful.hotkeys_popup.keys")
 
 local awful = require("awful")
 local naughty = require("naughty")
+
 local setTheme = require("helpers.setTheme")
 local setWallpaper = require("helpers.setWallpaper")
+local Wibar = require("ui.Wibar")
+local FloatingBox = require("ui.FloatingBox")
+local ShutdownMenu = require("ui.ShutdownMenu")
+local VolumePopup = require("ui.VolumePopup")
 
 --Check for errors and load default config if any
 if awesome.startup_errors then
@@ -51,11 +56,10 @@ require("./config/keybinds")
 require("./config/rules")
 
 -- Include some widgets
-require("./ui/wibar")
-FloatBox = require("./ui/floatBox")
-Volume = require("./ui/volume")
-Menu = require("./ui/menu")
--- Thing = require("./ui/thing")
+WibarWidget = Wibar()
+FloatingBoxWidget = FloatingBox()
+VolumePopupWidget = VolumePopup()
+ShutdownMenuWidget = ShutdownMenu()
 
 -- Define the keys
 root.keys(globalkeys)

@@ -7,7 +7,7 @@ local function createWeekDay()
 			format = " %A ",
 			align = "center",
 			halign = "center",
-			font = beautiful.font .. "SemiBold 12",
+			font = "Poppins " .. "SemiBold 12",
 			widget = wibox.widget.textclock,
 		},
 		fg = beautiful.yellowcolor,

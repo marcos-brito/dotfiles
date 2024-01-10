@@ -1,11 +1,10 @@
 local gears = require("gears")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
-local floatBox = require("ui.floatBox")
 local naughty = require("naughty")
 
 local function createWibarIcon()
-	local icon = beautiful.wibarIcon
+	local icon = beautiful.shutdownIcon
 	local wibarIcon = wibox.widget({
 		{
 			{
@@ -17,17 +16,13 @@ local function createWibarIcon()
 			widget = wibox.container.margin,
 		},
 		bg = beautiful.bg_normal,
-		fg = beautiful.wibarIconColor,
+		fg = beautiful.redcolor,
 		shape = beautiful.wibarItemsShape,
 		widget = wibox.container.background,
 	})
 
 	wibarIcon:connect_signal("button::press", function(x, y, button, a)
-		if a == 1 then
-			FloatBox:toggle()
-		else
-			Thing.visible = not Thing.visible
-		end
+		ShutdownMenuWidget.visible = not ShutdownMenuWidget.visible
 	end)
 
 	return wibarIcon

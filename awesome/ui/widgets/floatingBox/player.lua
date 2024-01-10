@@ -1,7 +1,7 @@
 local wibox = require("wibox")
 local awful = require("awful")
 local beautiful = require("beautiful")
-local icon = require("ui.widgets.floatingBox.icon")
+local Icon = require("ui.widgets.Icon")
 
 local title = wibox.widget({
 	align = "center",
@@ -18,9 +18,9 @@ local artist = wibox.widget({
 	widget = wibox.widget.textbox,
 })
 
-local previousIcon = icon("", "playerctl previous", 14, beautiful.redcolor)
-local middleIcon = icon("󰎈", "playerctl play-pause", 20, beautiful.redcolor)
-local nextIcon = icon("", "playerctl next", 14, beautiful.redcolor)
+local previousIcon = Icon("", "playerctl previous", 14, beautiful.redcolor)
+local middleIcon = Icon("󰎈", "playerctl play-pause", 20, beautiful.redcolor)
+local nextIcon = Icon("", "playerctl next", 14, beautiful.redcolor)
 
 local function createPlayer()
 	local player = wibox.widget({
