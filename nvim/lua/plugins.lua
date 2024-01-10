@@ -2,14 +2,19 @@ local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		fn.system({
+			"git",
+			"clone",
+			"--depth",
+			"1",
+			"https://github.com/wbthomason/packer.nvim",
+			install_path,
+		})
 		vim.cmd([[packadd packer.nvim]])
 		return true
 	end
 	return false
 end
-
-local packer_bootstrap = ensure_packer()
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
@@ -22,8 +27,7 @@ return require("packer").startup(function(use)
 
 	-- Files thing
 	use({ "nvim-telescope/telescope.nvim" })
-	use("nvim-tree/nvim-tree.lua")
-	use("nvim-telescope/telescope-file-browser.nvim")
+	use("stevearc/oil.nvim")
 
 	-- Highlights
 	use("nvim-treesitter/nvim-treesitter")
@@ -32,11 +36,6 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("sainnhe/gruvbox-material")
 	use("sainnhe/everforest")
-	use("overcache/NeoSolarized")
-
-	-- Buffer stuff
-	use("noib3/nvim-cokeline")
-	use("moll/vim-bbye")
 
 	-- Start screen
 	use("goolord/alpha-nvim")
@@ -45,13 +44,10 @@ return require("packer").startup(function(use)
 	use("akinsho/toggleterm.nvim")
 
 	-- Editing stuff
-	use("matze/vim-move")
-	use("mg979/vim-visual-multi")
 	use("RRethy/vim-illuminate")
 	use("numToStr/Comment.nvim")
 
 	-- UI
-	use("Pocco81/true-zen.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("NvChad/nvim-colorizer.lua")
 	use({
@@ -61,6 +57,7 @@ return require("packer").startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
 
 	--AutoComplete
 	use("hrsh7th/nvim-cmp")
@@ -87,27 +84,21 @@ return require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 
-	--Project
-	use("natecraddock/workspaces.nvim")
-
-	--Image viewer
-	use("m00qek/baleia.nvim")
-	use("samodostal/image.nvim")
-
 	--LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 	use("glepnir/lspsaga.nvim")
 	use("nanotee/sqls.nvim")
 	use("folke/trouble.nvim")
 
 	-- Productivity
 	use("rest-nvim/rest.nvim")
-	use("olimorris/persisted.nvim")
 	use("m4xshen/hardtime.nvim")
 	use("nvim-focus/focus.nvim")
+	use("github/copilot.vim")
+	use("tpope/vim-obsession")
 
 	-- Debug
 	use("mfussenegger/nvim-dap")
@@ -123,12 +114,8 @@ return require("packer").startup(function(use)
 	use("tpope/vim-dadbod")
 	use("kristijanhusak/vim-dadbod-ui")
 	use("kristijanhusak/vim-dadbod-completion")
-
 	use({
 		"kndndrj/nvim-dbee",
-		requires = {
-			"MunifTanjim/nui.nvim",
-		},
 		run = function()
 			-- Install tries to automatically detect the install method.
 			-- if it fails, try calling it with one of these parameters:
@@ -139,9 +126,11 @@ return require("packer").startup(function(use)
 			require("dbee").setup( --[[optional config]])
 		end,
 	})
+
 	-- Notify
 	use("rcarriga/nvim-notify")
 
+	use("MunifTanjim/nui.nvim")
 	use("antoinemadec/FixCursorHold.nvim")
 	use("andweeb/presence.nvim")
 	if packer_bootstrap then

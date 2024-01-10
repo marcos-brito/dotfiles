@@ -56,6 +56,7 @@ lsp_config.jsonls.setup({})
 lsp_config.prismals.setup({})
 lsp_config.vimls.setup({})
 lsp_config.bashls.setup({})
+lsp_config.hls.setup({})
 lsp_config.rust_analyzer.setup({
     filetypes = { "rust" },
     settings = {

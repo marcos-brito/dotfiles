@@ -1,5 +1,5 @@
 opt = vim.opt
-vim.o.showtabline = 2
+vim.o.showtabline = 0
 opt.termguicolors = true
 opt.number = true
 opt.relativenumber = true
@@ -12,7 +12,6 @@ opt.conceallevel = 0
 opt.fileencoding = "utf-8"
 opt.mouse = "a"
 opt.showmode = false
-opt.showtabline = 2
 opt.smartcase = true
 opt.smartindent = true
 opt.undofile = true

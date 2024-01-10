@@ -9,7 +9,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "filename" },
-		lualine_c = { "" },
+		lualine_c = { "branch" },
 		lualine_x = { "" },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
