@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 IGNORE=(.git .gitignore install.py install_nvim_on_windows.py install.sh README.md)
 INSTALLTION_DIR=.config
