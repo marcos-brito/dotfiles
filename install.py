@@ -40,7 +40,16 @@ def install_all_with_symlink():
         os.symlink(os.getcwd() + "/" + file, CONFIG_PATH + "/" + file)
 
 
-IGNORE = [".zshrc", ".git", ".gitignore", "README.md", "install.py"]
+IGNORE = [
+    ".zshrc",
+    ".git",
+    ".gitignore",
+    "README.md",
+    "install.py",
+    "install.sh",
+    "install_nvim_on_windows.py",
+    "assets",
+]
 HOME = os.environ["HOME"]
 CONFIG_PATH = HOME + "/.config"
 DOTFILES = get_dotfiles()
