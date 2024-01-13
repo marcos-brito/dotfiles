@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	dependencies = { "neovim/nvim-lspconfig" },
 	opts = {
 		title = true,

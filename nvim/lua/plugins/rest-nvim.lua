@@ -1,5 +1,6 @@
 return {
 	"rest-nvim/rest.nvim",
+	lazy = true,
 	opts = {
 		-- Open request results in a horizontal split
 		result_split_horizontal = true,

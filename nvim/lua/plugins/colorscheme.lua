@@ -1,6 +1,7 @@
 return {
 	{
 		"sainnhe/gruvbox-material",
+		event = "VimEnter",
 		opts = {},
 		config = function()
 			vim.g.gruvbox_material_background = "hard"
@@ -11,6 +12,7 @@ return {
 	{
 		"sainnhe/everforest",
 		enabled = false,
+		lazy = true,
 		opts = {},
 		config = function()
 			vim.g.everforest_background = "hard"
@@ -25,6 +27,7 @@ return {
 	{
 		"catppuccin/nvim",
 		enabled = false,
+		lazy = true,
 		opts = {
 			flavour = "mocha", -- latte, frappe, macchiato, mocha
 			background = {
