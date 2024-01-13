@@ -9,6 +9,13 @@ vim.g.maplocalleader = " "
 -- Copy from system clipboard
 keymap("n", '"p', '"+p', opts)
 
+-- LSP
+keymap("n", "gf", ":Lspsaga finder<CR>", opts)
+keymap("n", "gd", ":Lspsaga goto_definition<CR>", opts)
+keymap("n", "K", ":Lspsaga hover_doc<cr>", opts)
+keymap("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)
+keymap("n", "<leader>rn", ":Lspsaga rename<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<A-Up>", ":resize -2<CR>", opts)
 keymap("n", "<A-Down>", ":resize +2<CR>", opts)
