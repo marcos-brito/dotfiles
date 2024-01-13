@@ -5,10 +5,12 @@ return {
 		config = function()
 			vim.g.gruvbox_material_background = "hard"
 			vim.g.gruvbox_material_better_performance = 1
+			vim.cmd("colorscheme gruvbox-material")
 		end,
 	},
 	{
 		"sainnhe/everforest",
+		enabled = false,
 		opts = {},
 		config = function()
 			vim.g.everforest_background = "hard"
@@ -17,10 +19,12 @@ return {
 				bg0 = { "#1e2326", "233" },
 				bg_dim = { "#272e33", "235" },
 			}
+			vim.cmd("colorscheme everforest")
 		end,
 	},
 	{
 		"catppuccin/nvim",
+		enabled = false,
 		opts = {
 			flavour = "mocha", -- latte, frappe, macchiato, mocha
 			background = {
@@ -138,5 +142,8 @@ return {
 				},
 			},
 		},
+		config = function()
+			vim.cmd("colorscheme catppuccin-mocha")
+		end,
 	},
 }
