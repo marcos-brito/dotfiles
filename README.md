@@ -62,11 +62,11 @@ Here are some screnshots of my enviroment. I made three different colorschemes.
 
 ## Gruvbox
 
-![Gruvbox theme](./screenshot.png)
+![Gruvbox theme](./assets/screenshot.png)
 
 ## Catppuccin
 
-![Cattppuccin theme](./screenshot2.png)
+![Cattppuccin theme](./assets/screenshot2.png)
 
 ## Everforest
 
