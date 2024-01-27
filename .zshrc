@@ -26,5 +26,7 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 
 # Aliases
 alias ta="tmux attach -t"
+alias tn="tmux new -s"
 alias gs="git status -s"
 alias gc="git commit"
+alias gp="git push"
