@@ -17,4 +17,8 @@ require("options")
 require("autocommands")
 require("keymapping")
 require("lsp")
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+	change_detection = {
+		notify = false,
+	},
+})

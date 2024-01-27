@@ -1,3 +1,9 @@
+function override_highlights(highlights)
+	for group, colors in pairs(highlights) do
+		vim.api.nvim_set_hl(0, group, colors)
+	end
+end
+
 return {
 	{
 		"sainnhe/gruvbox-material",
@@ -6,6 +12,20 @@ return {
 			vim.g.gruvbox_material_background = "hard"
 			vim.g.gruvbox_material_better_performance = 1
 			vim.cmd("colorscheme gruvbox-material")
+			override_highlights({
+				NeotestPassed = { fg = "#a9b665" },
+				NeotestFailed = { fg = "#ea6962" },
+				NeotestRunning = { fg = "#e78a4e" },
+				NeotestSkipped = { fg = "#de869b" },
+				NeotestTest = { fg = "#ddc7a1" },
+				NeotestNamespace = { fg = "#7daea3" },
+				NeotestFile = { fg = "#de869b" },
+				NeotestDir = { fg = "#de869b" },
+				NeotestAdapterName = { fg = "#e78a4e" },
+				NeotestWinSelect = { fg = "#de869b" },
+				NeotestTarget = { fg = "#ea6962" },
+				NeotestUnknown = { fg = "#ddc7a1" },
+			})
 		end,
 	},
 	{
