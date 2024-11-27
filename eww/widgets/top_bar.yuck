@@ -1,0 +1,95 @@
+(defwindow topbar_window
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "1%"
+                               :width "97%"
+                               :height "35px"
+                               :anchor "top center")
+            ;; XORG
+           ;; :stacking "fg"
+           ;; :reserve (struts :distance "40px" :side "top")
+           ;; :windowtype "dock"
+           ;; :wm-ignore true
+
+           ;; Wayland
+           :stacking "fg"
+           :exclusive true
+           :focusable false
+           (topbar))
+
+(defwidget topbar []
+    (box 
+        :orientation "horizontal"
+        :class "topbar"
+        (rigth)
+        (left)))
+
+(defwidget rigth []
+    (box
+        :orientation "horizontal"
+        :space-evenly false
+        :halign "start"
+        :spacing 10
+        (nice_menu_button)
+        (workspaces)))
+ 
+(defwidget left []
+    (box
+        :orientation "horizontal"
+        :space-evenly false
+        :halign "end"
+        :spacing 10
+        (song)
+        (volume)
+        (time)
+        (systray :class "systray" :icon-size 16)
+        (power_button)))
+
+(defwidget nice_menu_button []
+    (label 
+        :text "󰣙"
+        :class "nice-menu-button"))
+
+(defwidget workspaces []
+  (literal :content workspace)) 
+
+(defwidget song []
+    (eventbox 
+        :onclick "eww open --toggle player_window"
+        (box
+            :class "song"
+            :space-evenly true
+            (label :text "${current_song}" :limit-width 20))))
+
+(defwidget volume []
+    (eventbox
+        :onclick "amixer sset 'Master' toggle"
+        (box 
+            :class "volume"
+            :orientation "horizontal"
+            :space-evenly false
+            :spacing 10
+            (label 
+                :class "volume__text" 
+                :text "󰋋")
+            (scale 
+             :min 0 
+             :max 100 
+             :value "${current_volume}" 
+             :onchange "amixer sset 'Master' {}%"))))
+
+(defwidget time []
+    (eventbox
+     :onclick "eww open --toggle calendar_window"
+        (box 
+            :orientation "horizontal"
+            :halign "end"
+            :class "time"
+            :width 80
+            (label  
+                :text "${current_time}"))))
+
+(defwidget power_button []
+    (eventbox 
+        :onclick "eww open --toggle power_menu_window"
+            (label :text "󰐥" :class "power-button" :halign "center")))

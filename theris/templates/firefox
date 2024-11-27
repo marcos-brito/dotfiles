@@ -1,0 +1,39 @@
+#back-button {
+  fill: {{red}} !important;
+}
+
+#forward-button {
+  fill: {{red}} !important;
+}
+
+#reload-button {
+  fill: {{yellow}} !important;
+}
+
+#home-button {
+  fill: {{green}} !important;
+}
+
+#tracking-protection-icon {
+  fill: {{magenta}} !important;
+}
+
+#PanelUI-menu-button {
+  fill: {{blue}} !important;
+}
+
+#unified-extensions-button {
+  fill: {{red}} !important;
+}
+
+#developer-button {
+  fill: {{yellow}} !important;
+}
+
+#downloads-button {
+  fill: {{green}} !important;
+}
+
+#nav-bar-overflow-button {
+  fill: {{yellow}} !important;
+}

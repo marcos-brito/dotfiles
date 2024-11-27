@@ -74,8 +74,9 @@ end)
 -- Autorun
 autorunApps = {
 	"picom",
-	-- "firefox",
-	-- "discord",
+	"xset r rate 200 25",
+	"xset s off",
+	"xremap ~/dotfiles/xremap/remaps.yml",
 }
 if autorun then
 	for app = 1, #autorunApps do

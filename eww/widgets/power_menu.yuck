@@ -1,0 +1,42 @@
+(defwidget power_menu []
+    (box 
+        :orientation "horizontal"
+        :class "power-menu"
+        (eventbox 
+            :onclick "hyprctl dispatch exit"
+            :class "power-menu__exit"
+            (label  
+                :text "󰿅"))
+        (eventbox 
+            :onclick ""
+            :class "power-menu__suspend"
+            (label  
+                :text "󰤁"))
+        (eventbox 
+            :onclick "reboot"
+            :class "power-menu__reboot"
+            (label  
+                :text ""))
+        (eventbox 
+            :onclick "shutdown now"
+            :class "power-menu__shutdown"
+            (label  
+                :text "󰐥"))))
+
+(defwindow power_menu_window
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "40%"
+                               :height "25%"
+                               :anchor "center")
+            ;; XORG
+           ;; :stacking "overlay"
+           ;; :windowtype "dock"
+           ;; :wm-ignore true
+
+           ;; Wayland
+           :stacking "overlay"
+           :exclusive true
+           :focusable false
+           (power_menu))

@@ -17,8 +17,12 @@ require("options")
 require("autocommands")
 require("keymapping")
 require("lsp")
-require("lazy").setup("plugins", {
+require("lazy").setup({
+	spec = {
+		{ import = "plugins" },
+	},
 	change_detection = {
+		enabled = true,
 		notify = false,
 	},
 })

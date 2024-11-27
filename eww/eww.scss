@@ -1,0 +1,220 @@
+* {
+  all: unset;
+  font-family: "Poppins", sans-serif;
+}
+
+// theris start
+$background: #0f1419;
+$background2: #253340;
+$foreground: #e6e1cf;
+$green: #b8cc52;
+$yellow: #FF7733;
+$red: #f07178;
+$blue: #36a3d9;
+
+// theris end
+$border-radius: 8px;
+
+// ********************* Topbar *********************
+
+.topbar {
+  background-color: transparent;
+}
+
+.systray {
+  background-color: $background;
+  border-radius: $border_radius;
+  min-width: 35px;
+}
+
+.nice-menu-button {
+  background-color: $background;
+  border-radius: $border_radius;
+  color: $yellow;
+  font-size: 20px;
+  min-width: 35px;
+}
+
+.workspaces {
+  background-color: $background;
+  border-radius: $border_radius;
+  font-size: 12px;
+  color: $foreground;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.workspaces__button {
+  border-radius: 8;
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.workspaces__button--active {
+  border-radius: 4px;
+  min-width: 25px;
+  min-height: 25px;
+  background-color: $green;
+  color: $background;
+}
+
+.song {
+  background-color: $background;
+  border-radius: $border_radius;
+  font-family: "Poppins", semibold;
+  font-size: 12px;
+  color: $blue;
+  font-weight: 500;
+  padding: 0px 16px;
+}
+
+.time {
+  background-color: $background;
+  border-radius: $border_radius;
+  font-family: "Poppins", semibold;
+  font-size: 12px;
+  color: $yellow;
+  font-weight: 500;
+}
+
+.volume {
+  background-color: $background;
+  border-radius: $border_radius;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.volume__text {
+  color: $foreground;
+  font-size: 18px;
+}
+
+// The external i.g the gray thing
+.volume scale trough {
+  background-color: $background2;
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 40px;
+}
+
+// The internal i.g the green thing
+.volume scale trough highlight {
+  background-color: $green;
+  color: #000000;
+  border-radius: 50px;
+}
+
+.volume--muted scale trough highlight {
+  background-color: $red;
+  color: #000000;
+  border-radius: 50px;
+}
+
+.power-button {
+  color: $red;
+  font-size: 20px;
+  background-color: $background;
+  border-radius: $border_radius;
+  min-width: 35px;
+}
+
+// ********************* Power menu *********************
+
+.power-menu {
+  background-color: $background;
+  border-radius: $border_radius;
+  font-size: 48px;
+}
+
+.power-menu__exit {
+  color: $blue;
+}
+
+.power-menu__suspend {
+  color: $yellow;
+}
+
+.power-menu__reboot {
+  color: $green;
+}
+
+.power-menu__shutdown {
+  color: $red;
+}
+
+// ********************* Player *********************
+
+.player {
+  background-color: $background;
+  border-radius: $border_radius;
+  padding: 16px;
+}
+
+.player__title {
+  font-weight: 700;
+  color: $foreground;
+}
+
+.player__artist {
+  font-size: 12px;
+  font-weight: 600;
+  color: $foreground;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.player__button {
+  font-size: 24px;
+}
+
+.player scale trough {
+  background-color: $background2;
+  border-radius: 50px;
+  min-height: 5px;
+}
+
+.player scale trough highlight {
+  background-color: $blue;
+  border-radius: 50px;
+}
+
+.volume--muted scale trough highlight {
+  background-color: $red;
+  border-radius: 50px;
+}
+
+// ********************* Volume *********************
+
+.volume-popup {
+  background-color: $background;
+  border-radius: $border_radius;
+}
+
+.volume-popup__icon {
+  color: $green;
+  font-size: 24px;
+}
+
+.volume-popup__text {
+  color: $foreground;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+// ********************* Calendar *********************
+
+.cal {
+  color: $foreground;
+  font-weight: 600;
+  background-color: $background;
+  border-radius: $border_radius;
+  padding: 16px;
+}
+
+calendar.header {
+  color: $yellow;
+}
+
+calendar.button {
+  color: $yellow;
+}

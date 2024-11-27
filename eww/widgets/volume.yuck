@@ -1,0 +1,29 @@
+(defwindow volume_popup
+           :monitor 0
+           :geometry (geometry :x "5%"
+                               :y "35%"
+                               :width "6.3%"
+                               :height "9%"
+                               :anchor "top right")
+            ;; XORG
+           ;; :stacking "overlay"
+           ;; :windowtype "dock"
+           ;; :wm-ignore true
+
+           ;; Wayland
+           :stacking "overlay"
+           :exclusive false
+           :focusable false
+           (volume_overlay))
+ 
+(defwidget volume_overlay []
+    (box
+        :class "volume-popup"
+        :orientation "horizontal"
+        :spacing -10
+        (label 
+            :class "volume-popup__icon" 
+            :text "󰋋")
+        (label 
+            :class "volume-popup__text" 
+            :text "${current_volume}")))

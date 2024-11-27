@@ -1,0 +1,7 @@
+$background: {{background}};
+$background2: {{black}};
+$foreground: {{foreground}};
+$green: {{green}};
+$yellow: {{yellow}};
+$red: {{red}};
+$blue: {{blue}};

@@ -14,7 +14,7 @@ local themes_path = string.format("%s/.config/awesome/themes/", os.getenv("HOME"
 
 local theme = {}
 
-theme.wallpaper = themes_path .. "gruvbox/background2.png"
+theme.wallpaper = themes_path .. "gruvbox/background1.png"
 theme.wibarIcon = themes_path .. "gruvbox/wibarIcon.png"
 theme.shutdownIcon = themes_path .. "gruvbox/shutdownIcon.png"
 

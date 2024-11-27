@@ -1,0 +1,6 @@
+config.set(
+    "url.searchengines",
+    {
+        "DEFAULT": "https://duckduckgo.com/?q={}&k7={{background}}&k9={{yellow}}&kaa={{red}}&k8={{foreground}}&kx={{black}}&kj={{background}}"
+    },
+)

@@ -1,0 +1,40 @@
+background {{background}}
+foreground {{foreground}}
+
+selection_background {{background}}
+selection_foreground {{foreground}}
+
+cursor {{foreground}}
+cursor_text_color {{background}}
+
+# Black
+color0 {{black}}
+color8 {{black}}
+
+# Red
+color1 {{red}}
+color9 {{red}}
+
+# Green
+color2 {{green}}
+color10 {{green}}
+
+# Yellow
+color3 {{yellow}}
+color11 {{yellow}}
+
+# Blue
+color4 {{blue}}
+color12 {{blue}}
+
+# Magenta
+color5 {{magenta}}
+color13 {{magenta}}
+
+# Cyan
+color6 {{cyan}}
+color14 {{cyan}}
+
+# White
+color7 {{white}}
+color15 {{white}}

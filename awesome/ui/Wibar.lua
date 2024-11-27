@@ -15,7 +15,7 @@ local function Wibar()
 			screen = s,
 			height = 33,
 			bg = "none",
-			border_width = 5,
+			border_width = 10,
 		})
 		-- Add widgets to the wibox
 		s.mywibox:setup({

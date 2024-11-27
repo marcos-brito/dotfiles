@@ -1,0 +1,88 @@
+- name: kitty
+  path: /home/marcos-brito/.config/kitty/theris.conf
+  method: !Template
+    template: kitty
+
+- name: superfile
+  path: /home/marcos-brito/.config/superfile/theme/theris.toml
+  method: !Template
+    template: superfile
+
+- name: kitty_hook
+  path: ""
+  method: !Script
+    path: /home/marcos-brito/.config/theris/kitty.sh
+
+- name: eww
+  path: /home/marcos-brito/.config/eww/eww.scss
+  method: !Delimiter
+    template: eww
+    start: "// theris start"
+    end: "// theris end"
+
+- name: firefox
+  path: /home/marcos-brito/.mozilla/firefox/priqc9n9.default-release/chrome/userChrome.css
+  method: !Delimiter
+    template: firefox
+    start: "/* theris start */"
+    end: "/* theris end */"
+
+- name: zathura
+  path: /home/marcos-brito/.config/zathura/theris
+  method: !Template
+    template: zathura
+
+- name: rofi
+  path: /home/marcos-brito/.config/rofi/theme.rasi
+  method: !Template
+    template: rofi
+
+- name: obsidian
+  path: /home/marcos-brito/HD/Notes/.obsidian/plugins/obsidian-style-settings/data.json
+  method: !Template
+    template: obsidian
+
+- name: nvim
+  path: /home/marcos-brito/.config/nvim/lua/plugins/colorscheme.lua
+  method: !Delimiter
+    template: nvim
+    start: "-- theris start"
+    end: "-- theris end"
+
+- name: qutebrowser
+  path: /home/marcos-brito/.config/qutebrowser/catppuccin/setup.py
+  method: !Delimiter
+    template: qutebrowser
+    start: "# theris start"
+    end: "# theris end"
+
+- name: duckduckgo
+  path: /home/marcos-brito/.config/qutebrowser/config.py
+  method: !Delimiter
+    template: duckduck
+    start: "# theris start"
+    end: "# theris end"
+
+- name: tmux
+  path: /home/marcos-brito/.config/tmux/tmux.conf
+  method: !Delimiter
+    template: tmux
+    start: "# theris start"
+    end: "# theris end"
+
+- name: tmux_hook
+  path: ""
+  method: !Script
+    path: "/home/marcos-brito/.config/theris/tmux.sh"
+
+- name: hyprpaper
+  path: "/home/marcos-brito/.config/hypr/hyprpaper.conf"
+  method: !Delimiter
+    template: "wallpaper = HDMI-A-1, {{wallpaper}}"
+    start: "# theris start"
+    end: "# theris end"
+
+- name: hyprpaper_hook
+  path: ""
+  method: !Script
+    path: "/home/marcos-brito/.config/theris/wallpaper.sh"

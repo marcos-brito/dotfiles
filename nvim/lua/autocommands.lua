@@ -5,6 +5,10 @@ vim.cmd([[
   augroup end
 ]])
 
+vim.cmd([[
+    let g:rustfmt_autosave = 1
+]])
+
 local ignore_filetypes = { "NvimTree", "alpha" }
 local ignore_buftypes = { "nofile", "prompt", "popup" }
 
@@ -28,4 +32,15 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 	desc = "Disable focus autoresize for FileType",
+})
+
+vim.api.nvim_create_autocmd({
+	"BufNewFile",
+	"BufRead",
+}, {
+	pattern = "*.typ",
+	callback = function()
+		local buf = vim.api.nvim_get_current_buf()
+		vim.api.nvim_buf_set_option(buf, "filetype", "typst")
+	end,
 })

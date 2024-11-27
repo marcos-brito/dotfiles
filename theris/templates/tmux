@@ -1,0 +1,2 @@
+set -g @tmux_power_theme '{{magenta}}'
+set -g @tmux_power_bg '{{background}}'

@@ -8,18 +8,23 @@ return {
 
 		return {
 			sources = {
-				null_ls.builtins.formatting.stylua, --.with({ extra_args = "--indent-width 4" }),
-				null_ls.builtins.formatting.prettierd, --.with({ extra_args = "--tab-width 4" }),
+				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.prettier.with({
+					condition = function(utils)
+						return utils.root_has_file({ "package.json" })
+					end,
+				}),
 				null_ls.builtins.formatting.black,
-				null_ls.builtins.formatting.rustfmt,
 				null_ls.builtins.formatting.shfmt,
-				null_ls.builtins.formatting.golines,
-				null_ls.builtins.formatting.sql_formatter,
-				null_ls.builtins.formatting.fourmolu,
+				null_ls.builtins.formatting.ocamlformat,
 				null_ls.builtins.formatting.clang_format,
-				-- null_ls.builtins.diagnostics.cpplint,
 				null_ls.builtins.diagnostics.eslint,
+				null_ls.builtins.formatting.gofmt,
+				null_ls.builtins.diagnostics.golangci_lint,
+				null_ls.builtins.diagnostics.hadolint,
+				null_ls.builtins.diagnostics.yamllint,
 			},
+			debug = true,
 			on_attach = function(client, bufnr)
 				if client.supports_method("textDocument/formatting") then
 					vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -27,8 +32,6 @@ return {
 						group = augroup,
 						buffer = bufnr,
 						callback = function()
-							-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-							-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
 							vim.lsp.buf.format({ async = false })
 						end,
 					})

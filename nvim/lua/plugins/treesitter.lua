@@ -9,13 +9,6 @@ return {
 			highlight = {
 				enable = true, -- false will disable the whole extension
 			},
-			autopairs = {
-				enable = true,
-			},
-			autotag = {
-				enable = true,
-			},
-			indent = { enable = true },
 		})
 	end,
 }

@@ -1,0 +1,13 @@
+modmap:
+  - name: Useful caps
+    remap:
+      CapsLock:
+        held: [CONTROL_L]
+        alone: [CapsLock]
+keymap:
+  - name: For harpoon
+    remap:
+      C-KEY_SEMICOLON: C-h
+  - name: Better workspace navigation
+    remap:
+      ALT_R: [KEY_LEFTMETA]

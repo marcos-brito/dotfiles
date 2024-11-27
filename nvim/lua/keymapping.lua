@@ -16,13 +16,17 @@ keymap("n", "K", ":Lspsaga hover_doc<cr>", opts)
 keymap("n", "<leader>ca", ":Lspsaga code_action<CR>", opts)
 keymap("n", "<leader>rn", ":Lspsaga rename<CR>", opts)
 
+-- Aerial
+keymap("n", "<leader>o", ":AerialToggle!<CR>", opts)
+
 -- Harpoon
-keymap("n", "<leader>u", ":lua require('harpoon'):list():append()<CR>", opts)
+keymap("n", "<leader>u", ":lua require('harpoon'):list():add()<CR>", opts)
 keymap("n", "<C-p>", ":lua require('harpoon').ui:toggle_quick_menu(require('harpoon'):list())<CR>", opts)
-keymap("n", "<C-h>", ":lua require('harpoon'):list():select(1)<CR>", opts)
-keymap("n", "<C-j>", ":lua require('harpoon'):list():select(2)<CR>", opts)
-keymap("n", "<C-k>", ":lua require('harpoon'):list():select(3)<CR>", opts)
-keymap("n", "<C-l>", ":lua require('harpoon'):list():select(4)<CR>", opts)
+keymap("n", "<C-j>", ":lua require('harpoon'):list():select(1)<CR>", opts)
+keymap("n", "<C-k>", ":lua require('harpoon'):list():select(2)<CR>", opts)
+keymap("n", "<C-l>", ":lua require('harpoon'):list():select(3)<CR>", opts)
+-- C-ç does not work but i remapped it to C-h on my machine
+keymap("n", "<C-h>", ":lua require('harpoon'):list():select(4)<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<A-Up>", ":resize -2<CR>", opts)

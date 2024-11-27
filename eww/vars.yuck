@@ -1,0 +1,12 @@
+(defpoll title :interval "1s" 'playerctl --player=spotify metadata --format \"{{title}}\"')
+(defpoll artist :interval "1s" "playerctl --player=spotify metadata --format '{{artist}}'")
+(defpoll current :interval "1s" "playerctl --player=spotify metadata --format '{{duration(position)}}'")
+(defpoll length_in_seconds :interval "1s" "echo $(($(playerctl --player=spotify metadata --format '{{mpris:length}}')/1000000))")
+(defpoll current_in_seconds :interval "1s" "playerctl position")
+
+(defpoll current_time :interval "1m" "date +%H:%M")
+
+(defvar current_workspace 1)
+(deflisten workspace "./scripts/workspaces.sh")
+(defpoll current_song :interval "5s" 'playerctl --player=spotify metadata --format \"{{artist}} - {{title}}\"')
+(deflisten current_volume :initial 0 "./scripts/volume.sh")
