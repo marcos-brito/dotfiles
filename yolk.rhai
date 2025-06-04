@@ -24,5 +24,10 @@ export let eggs = #{
         targets: "~/.config/rofi",
         templates: ["theme.rasi"],
         enabled: true,
-    }
+    },
+    dunst: #{ 
+        targets: "~/.config/dunst",
+        templates: ["dunstrc"],
+        enabled: true,
+    },
 };

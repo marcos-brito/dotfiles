@@ -1,0 +1,21 @@
+[global]
+width = 350
+corner_radius = 8
+font = Poppins 12
+frame_width = 0 
+line_height = 2
+padding = 16
+horizontal_padding = 16
+gap_size = 8
+
+[urgency_low]
+background = "#202020" # {< replace_color(data.theme.background) >}
+foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+
+[urgency_normal]
+background = "#202020" # {< replace_color(data.theme.background) >}
+foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+
+[urgency_critical]
+background = "#202020" # {< replace_color(data.theme.background) >}
+foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
