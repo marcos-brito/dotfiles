@@ -19,5 +19,10 @@ export let eggs = #{
         targets: "~/.config/zathura",
         templates: ["theme"],
         enabled: true,
+    },
+    rofi: #{ 
+        targets: "~/.config/rofi",
+        templates: ["theme.rasi"],
+        enabled: true,
     }
 };
