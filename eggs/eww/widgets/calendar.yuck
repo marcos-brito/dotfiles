@@ -1,0 +1,23 @@
+(defwidget cal []
+    (box 
+        :orientation "horizontal"
+        :halign "end"
+        :class "cal"
+        :width 50
+        (calendar)))
+            
+
+(defwindow calendar_window
+           :monitor 0
+           :geometry (geometry :x "5%"
+                               :y "1%"
+                               :anchor "top right")
+            ;; XORG
+           :stacking "overlay"
+           :windowtype "dock"
+           :wm-ignore true
+           ;; Wayland
+           :stacking "overlay"
+           :exclusive true
+           :focusable false
+           (cal))

@@ -103,4 +103,9 @@ export let eggs = #{
         templates: ["theme.conf"],
         enabled: true,
     },
+    eww: #{ 
+        targets: "~/.config/eww",
+        templates: ["eww.scss"],
+        enabled: true,
+    }
 };

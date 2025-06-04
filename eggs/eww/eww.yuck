@@ -1,0 +1,6 @@
+(include "./vars.yuck")
+(include "./widgets/volume.yuck")
+(include "./widgets/power_menu.yuck")
+(include "./widgets/player.yuck")
+(include "./widgets/calendar.yuck")
+(include "./widgets/top_bar.yuck")
