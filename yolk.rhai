@@ -34,4 +34,13 @@ export let eggs = #{
         targets: "~/.config/xremap",
         enabled: true,
     },
+    zellij: #{ 
+        targets: "~/.config/zellij",
+        enabled: true,
+    },
+    tmux: #{ 
+        targets: "~/.config/tmux",
+        templates: ["tmux.conf"],
+        enabled: true,
+    },
 };
