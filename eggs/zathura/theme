@@ -1,0 +1,37 @@
+set default-fg                 "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set default-bg                 "#202020" # {< replace_color(data.theme.background) >}
+
+set completion-bg              "#202020" # {< replace_color(data.theme.background) >}
+set completion-fg              "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set completion-highlight-bg    "#3c3836" # {< replace_color(data.theme.background2) >}
+set completion-highlight-fg    "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set completion-group-bg        "#202020" # {< replace_color(data.theme.background) >}
+set completion-group-fg        "#b8bb26" # {< replace_color(data.theme.green) >}
+
+set statusbar-fg               "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set statusbar-bg               "#202020" # {< replace_color(data.theme.background) >}
+
+set notification-bg            "#3c3836" # {< replace_color(data.theme.background2) >}
+set notification-fg            "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set notification-error-bg      "#3c3836" # {< replace_color(data.theme.background2) >}
+set notification-error-fg      "#fb4932" # {< replace_color(data.theme.red) >}
+set notification-warning-bg    "#202020" # {< replace_color(data.theme.background) >}
+set notification-warning-fg    "#fabd2f" # {< replace_color(data.theme.yellow) >}
+
+set inputbar-fg                "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set inputbar-bg                "#202020" # {< replace_color(data.theme.background) >}
+
+set recolor-lightcolor         "#202020" # {< replace_color(data.theme.background) >}
+set recolor-darkcolor          "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+
+set index-fg                   "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set index-bg                   "#202020" # {< replace_color(data.theme.background) >}
+set index-active-fg            "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set index-active-bg            "#3c3836" # {< replace_color(data.theme.background2) >}
+
+set render-loading-bg          "#202020" # {< replace_color(data.theme.background) >}
+set render-loading-fg          "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+
+set highlight-color            "#3c3836" # {< replace_color(data.theme.background2) >}
+set highlight-fg               "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set highlight-active-color     "#b8bb26" # {< replace_color(data.theme.green) >}

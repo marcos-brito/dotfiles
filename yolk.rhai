@@ -107,5 +107,10 @@ export let eggs = #{
         targets: "~/.config/eww",
         templates: ["eww.scss"],
         enabled: true,
+    },
+    zathura: #{ 
+        targets: "~/.config/zathura",
+        templates: ["theme"],
+        enabled: true,
     }
 };
