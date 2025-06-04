@@ -1,0 +1,13 @@
+modmap:
+  - name: Useful caps
+    remap:
+      CapsLock:
+        held: [CONTROL_L]
+        alone: [CapsLock]
+keymap:
+  - name: For harpoon
+    remap:
+      C-KEY_SEMICOLON: C-h
+  - name: Better quotes for 60% keyboard
+    remap:
+      SHIFT-KEY_ESC: [SHIFT-KEY_GRAVE]

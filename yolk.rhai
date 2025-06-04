@@ -30,4 +30,8 @@ export let eggs = #{
         templates: ["dunstrc"],
         enabled: true,
     },
+    xremap: #{ 
+        targets: "~/.config/xremap",
+        enabled: true,
+    },
 };
