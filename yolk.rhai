@@ -10,6 +10,13 @@ export let eggs = #{
         templates: ["theme.conf"],
         enabled: true,
     },
+    zsh: #{ 
+        targets: #{
+            ".zshrc": "~/.zshrc",
+            ".zshenv": "~/.zshenv",
+        },
+        enabled: true,
+    },
     eww: #{ 
         targets: "~/.config/eww",
         templates: ["eww.scss"],
