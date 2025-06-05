@@ -41,6 +41,11 @@ export let eggs = #{
     tmux: #{ 
         targets: "~/.config/tmux",
         templates: ["tmux.conf"],
+        enabled: false,
+    },
+    qutebrowser: #{ 
+        targets: "~/.config/qutebrowser",
+        templates: ["config.py"],
         enabled: true,
     },
 };
