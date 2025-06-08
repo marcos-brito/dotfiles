@@ -55,4 +55,9 @@ export let eggs = #{
         templates: ["config.py"],
         enabled: true,
     },
+    nvim: #{ 
+        targets: "~/.config/nvim",
+        templates: ["lua/plugins/ui/colorscheme.lua"],
+        enabled: true,
+    },
 };
