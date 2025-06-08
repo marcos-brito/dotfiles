@@ -1,37 +1,37 @@
-set default-fg                 "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set default-bg                 "#202020" # {< replace_color(data.theme.background) >}
+set default-fg                 "#D4BE98" # {< replace_color(data.theme.base05) >}
+set default-bg                 "#141617" # {< replace_color(data.theme.base00) >}
 
-set completion-bg              "#202020" # {< replace_color(data.theme.background) >}
-set completion-fg              "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set completion-highlight-bg    "#3c3836" # {< replace_color(data.theme.background2) >}
-set completion-highlight-fg    "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set completion-group-bg        "#202020" # {< replace_color(data.theme.background) >}
-set completion-group-fg        "#b8bb26" # {< replace_color(data.theme.green) >}
+set completion-bg              "#1D2021" # {< replace_color(data.theme.base01) >}
+set completion-fg              "#928374" # {< replace_color(data.theme.base04) >}
+set completion-highlight-bg    "#1D2021" # {< replace_color(data.theme.base01) >}
+set completion-highlight-fg    "#928374" # {< replace_color(data.theme.base04) >}
+set completion-group-bg        "#141617" # {< replace_color(data.theme.base00) >}
+set completion-group-fg        "#A9B665" # {< replace_color(data.theme.base0B) >}
 
-set statusbar-fg               "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set statusbar-bg               "#202020" # {< replace_color(data.theme.background) >}
+set statusbar-fg               "#D4BE98" # {< replace_color(data.theme.base05) >}
+set statusbar-bg               "#141617" # {< replace_color(data.theme.base00) >}
 
-set notification-bg            "#3c3836" # {< replace_color(data.theme.background2) >}
-set notification-fg            "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set notification-error-bg      "#3c3836" # {< replace_color(data.theme.background2) >}
-set notification-error-fg      "#fb4932" # {< replace_color(data.theme.red) >}
-set notification-warning-bg    "#202020" # {< replace_color(data.theme.background) >}
-set notification-warning-fg    "#fabd2f" # {< replace_color(data.theme.yellow) >}
+set notification-bg            "#1D2021" # {< replace_color(data.theme.base01) >}
+set notification-fg            "#D4BE98" # {< replace_color(data.theme.base05) >}
+set notification-error-bg      "#1D2021" # {< replace_color(data.theme.base01) >}
+set notification-error-fg      "#EA6962" # {< replace_color(data.theme.base08) >}
+set notification-warning-bg    "#141617" # {< replace_color(data.theme.base00) >}
+set notification-warning-fg    "#D8A657" # {< replace_color(data.theme.base0A) >}
 
-set inputbar-fg                "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set inputbar-bg                "#202020" # {< replace_color(data.theme.background) >}
+set inputbar-fg                "#D4BE98" # {< replace_color(data.theme.base05) >}
+set inputbar-bg                "#141617" # {< replace_color(data.theme.base00) >}
 
-set recolor-lightcolor         "#202020" # {< replace_color(data.theme.background) >}
-set recolor-darkcolor          "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set recolor-lightcolor         "#141617" # {< replace_color(data.theme.base00) >}
+set recolor-darkcolor          "#D4BE98" # {< replace_color(data.theme.base05) >}
 
-set index-fg                   "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set index-bg                   "#202020" # {< replace_color(data.theme.background) >}
-set index-active-fg            "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set index-active-bg            "#3c3836" # {< replace_color(data.theme.background2) >}
+set index-fg                   "#D4BE98" # {< replace_color(data.theme.base05) >}
+set index-bg                   "#141617" # {< replace_color(data.theme.base00) >}
+set index-active-fg            "#D4BE98" # {< replace_color(data.theme.base05) >}
+set index-active-bg            "#1D2021" # {< replace_color(data.theme.base01) >}
 
-set render-loading-bg          "#202020" # {< replace_color(data.theme.background) >}
-set render-loading-fg          "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+set render-loading-bg          "#141617" # {< replace_color(data.theme.base00) >}
+set render-loading-fg          "#D4BE98" # {< replace_color(data.theme.base05) >}
 
-set highlight-color            "#3c3836" # {< replace_color(data.theme.background2) >}
-set highlight-fg               "#ebdbb2" # {< replace_color(data.theme.foreground) >}
-set highlight-active-color     "#b8bb26" # {< replace_color(data.theme.green) >}
+set highlight-color            "#1D2021" # {< replace_color(data.theme.base01) >}
+set highlight-fg               "#D4BE98" # {< replace_color(data.theme.base05) >}
+set highlight-active-color     "#A9B665" # {< replace_color(data.theme.base0B) >}

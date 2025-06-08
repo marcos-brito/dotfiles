@@ -1,7 +1,7 @@
 import "themes" as themes;
 
 export let data = #{
-    theme: themes::gruvbox,
+    theme: themes::gruvbox_material,
 };
 
 export let eggs = #{

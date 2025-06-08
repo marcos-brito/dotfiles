@@ -9,13 +9,13 @@ horizontal_padding = 16
 gap_size = 8
 
 [urgency_low]
-background = "#202020" # {< replace_color(data.theme.background) >}
-foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+background = "#141617" # {< replace_color(data.theme.base00) >}
+foreground = "#D4BE98" # {< replace_color(data.theme.base05) >}
 
 [urgency_normal]
-background = "#202020" # {< replace_color(data.theme.background) >}
-foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+background = "#141617" # {< replace_color(data.theme.base00) >}
+foreground = "#D4BE98" # {< replace_color(data.theme.base05) >}
 
 [urgency_critical]
-background = "#202020" # {< replace_color(data.theme.background) >}
-foreground = "#ebdbb2" # {< replace_color(data.theme.foreground) >}
+background = "#141617" # {< replace_color(data.theme.base00) >}
+foreground = "#D4BE98" # {< replace_color(data.theme.base05) >}

@@ -3,13 +3,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-$background: #202020; // {< replace_color(data.theme.background) >}
-$background2: #3c3836; // {< replace_color(data.theme.black) >}
-$foreground: #ebdbb2; // {< replace_color(data.theme.foreground) >}
-$green: #b8bb26; // {< replace_color(data.theme.green) >}
-$yellow: #fabd2f; // {< replace_color(data.theme.yellow) >}
-$red: #fb4932; // {< replace_color(data.theme.red) >}
-$blue: #83a598; // {< replace_color(data.theme.blue) >}
+$background: #1D2021; // {< replace_color(data.theme.base01) >}
+$background2: #282828; // {< replace_color(data.theme.base02) >}
+$foreground: #D4BE98; // {< replace_color(data.theme.base05) >}
+$green: #A9B665; // {< replace_color(data.theme.base0B) >}
+$yellow: #D8A657; // {< replace_color(data.theme.base0A) >}
+$red: #EA6962; // {< replace_color(data.theme.base08) >}
+$blue: #7DAEA3; // {< replace_color(data.theme.base0D) >}
 $border-radius: 8px;
 
 // ********************* Topbar *********************

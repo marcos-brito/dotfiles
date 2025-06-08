@@ -1,15 +1,15 @@
 palette = {
-    "background": "#202020",  # {< replace_color(data.theme.background) >}
-    "background2": "#3c3836",  # {< replace_color(data.theme.background2) >}
-    "foreground": "#ebdbb2",  # {< replace_color(data.theme.foreground) >}
-    "black": "#3c3836",  # {< replace_color(data.theme.black) >}
-    "red": "#fb4932",  # {< replace_color(data.theme.red) >}
-    "green": "#b8bb26",  # {< replace_color(data.theme.green) >}
-    "yellow": "#fabd2f",  # {< replace_color(data.theme.yellow) >}
-    "blue": "#83a598",  # {< replace_color(data.theme.blue) >}
-    "magenta": "#d3869b",  # {< replace_color(data.theme.magenta) >}
-    "cyan": "#8ec07c",  # {< replace_color(data.theme.cyan) >}
-    "white": "#928374",  # {< replace_color(data.theme.white) >}
+    "background": "#141617",  # {< replace_color(data.theme.base00) >}
+    "background2": "#1D2021",  # {< replace_color(data.theme.base01) >}
+    "foreground": "#D4BE98",  # {< replace_color(data.theme.base05) >}
+    "black": "#282828",  # {< replace_color(data.theme.base02) >}
+    "red": "#EA6962",  # {< replace_color(data.theme.base08) >}
+    "green": "#A9B665",  # {< replace_color(data.theme.base0B) >}
+    "yellow": "#D8A657",  # {< replace_color(data.theme.base0A) >}
+    "blue": "#7DAEA3",  # {< replace_color(data.theme.base0D) >}
+    "magenta": "#D3869B",  # {< replace_color(data.theme.base0E) >}
+    "cyan": "#89B482",  # {< replace_color(data.theme.base0C) >}
+    "white": "#DDC7A1",  # {< replace_color(data.theme.base06) >}
 }
 
 config.load_autoconfig()

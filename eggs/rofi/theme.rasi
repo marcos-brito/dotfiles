@@ -1,12 +1,10 @@
 * {
-    bg-col:  #202020; // {< replace_color(data.theme.background) >}
-    bg-col-light: #202020; // {< replace_color(data.theme.background) >}
-    border-col: #202020; // {< replace_color(data.theme.background) >}
-    selected-col: #202020; // {< replace_color(data.theme.background) >}
-    green: #b8bb26; // {< replace_color(data.theme.green) >}
-    fg-col: #ebdbb2; // {< replace_color(data.theme.foreground) >}
-    fg-col2: #fb4932; // {< replace_color(data.theme.red) >}
-    black: #3c3836; // {< replace_color(data.theme.black) >}
+    bg-col:  #141617; // {< replace_color(data.theme.base00) >}
+    bg-col-light: #141617; // {< replace_color(data.theme.base00) >}
+    border-col: #141617; // {< replace_color(data.theme.base00) >}
+    selected-col: #141617; // {< replace_color(data.theme.base00) >}
+    fg-col: #D4BE98; // {< replace_color(data.theme.base05) >}
+    fg-col2: #E78A4E; // {< replace_color(data.theme.base09) >}
 
     width: 600;
     font: "JetBrainsMono Nerd Font 11";
@@ -36,7 +34,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @green;
+    background-color: @fg-col2;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -86,14 +84,14 @@ mode-switcher {
 button {
     padding: 10px;
     background-color: @bg-col-light;
-    text-color: @black;
+    text-color: @fg-col;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
 }
 
 button selected {
   background-color: @bg-col;
-  text-color: @green;
+  text-color: @fg-col2;
 }
 
 message {
@@ -106,6 +104,6 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @green;
+    text-color: @fg-col2;
     background-color: @bg-col-light;
 }
