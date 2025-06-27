@@ -2,6 +2,7 @@ import "themes" as themes;
 
 export let data = #{
     theme: themes::gruvbox_material,
+    wallpaper: "~/Pictures/wallpapers/stairs.jpg"
 };
 
 export let eggs = #{
@@ -60,4 +61,16 @@ export let eggs = #{
         templates: ["lua/plugins/ui/colorscheme.lua"],
         enabled: true,
     },
+    hypr: #{
+        targets: #{
+            "hyprland.conf" : "~/.config/hypr/hyprland.conf",
+            "hyprlock.conf" : "~/.config/hypr/hyprlock.conf",
+            "hyprpaper.conf" : "~/.config/hypr/hyprpaper.conf",
+        },
+        templates: ["hyprland.conf", "hyprlock.conf", "hyprpaper.conf"],
+        enabled: true,
+        unsafe_shell_hooks: #{
+            post_deploy: `hyprctl hyprpaper preload ${data.wallpaper} && hyprctl hyprpaper wallpaper "HDMI-A-1, ${data.wallpaper}"`,
+        }
+    }
 };
