@@ -1,0 +1,31 @@
+pragma Singleton
+import Quickshell
+
+Singleton {
+    readonly property string wallpaper: "/home/marcos-brito/Pictures/wallpapers/stairs.jpg"
+    readonly property string transparent: "#00000000"
+    readonly property string base00: "#141617"
+    readonly property string base01: "#1D2021"
+    readonly property string base02: "#282828"
+    readonly property string base03: "#7C6F64"
+    readonly property string base04: "#928374"
+    readonly property string base05: "#D4BE98"
+    readonly property string base06: "#DDC7A1"
+    readonly property string base07: "#E3D4B3"
+    readonly property string base08: "#EA6962"
+    readonly property string base09: "#E78A4E"
+    readonly property string base0A: "#D8A657"
+    readonly property string base0B: "#A9B665"
+    readonly property string base0C: "#89B482"
+    readonly property string base0D: "#7DAEA3"
+    readonly property string base0E: "#D3869B"
+    readonly property string base0F: "#BB7351"
+    readonly property string base10: "#101112"
+    readonly property string base11: "#0E0F10"
+    readonly property string base12: "#FF8A80"
+    readonly property string base13: "#F0BC5E"
+    readonly property string base14: "#C8D47D"
+    readonly property string base15: "#A4D79E"
+    readonly property string base16: "#9FD3C4"
+    readonly property string base17: "#F29BB4"
+}
